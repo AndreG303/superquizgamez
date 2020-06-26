@@ -23,21 +23,3 @@ THEN I can save my initials and score
 // if you use leaderboard, array of objects
 // 1. Bobby 1000
 // 2. Jackie 999
-
-/ if(answerButtons[questions]["userAnswer"] === questions["correct"]){
-//     score.textContent = "You got it correct";
-//     setTimeout(function(){
-//         questionIndex++;
-//         initializeQuestion();
-//         score.textContent= "";
-//     }, 1000);
-// }
-// else{
-//     score.textContent = "You got it wrong";
-//     setTimeout(function(){
-//         questionIndex++;
-//         initializeQuestion();
-//         score.textContent= "";
-//     }, 1000);
-// }
-// }

@@ -2,25 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title></title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- <script src="js/main.js" defer></script>
+    <script src="js/questions.js" defer></script> -->
+    <title>SUPER QUIZ GAMEz</title>
 </head>
 
 <body>
-    <header>
-        <h1></h1>
+    <!-- fixed top nav bar -->
+    <header class="p-3">
+        <nav class="navbar navbar-expand-md fixed-top">
+            <div class="container-fluid">
+                <div id="highscore" class="nav-item nav-link"> View High Scores</div>
+                <h1 id="navbar-title">Super Quiz Gamez</h1>
+                <table id="timers" style="visibility: hidden;">
+                    <tr>
+                        <td> Time left in Game: </td>
+                        <td> <span id="gameTimer" class="nav-item"></span> </td>
+                    </tr>
+                    <tr>
+                        <td>Time left for Question:</td>
+                        <td> <span id="quesTimer" class="nav-item"></span> </td>
+                    </tr>
+                </table>
+            </div>
+        </nav>
     </header>
-    <div id="name"></div>
-    <div id="score"></div>
-    <div id="minutes"></div>
-    <div id="seconds"></div>
-    <button id="button"> start </button>
-    <div id="questions"></div>
-    <div id="answers"></div>
-    <script src="js/main.js"defer></script>
+    <!-- instructions and quiz content -->
+    <section class="container-fluid" id="details"></section>
+
+    <!-- fixed bottom footer -->
+    <footer>
+        <nav class="navbar fixed-bottom footer">
+            <div class="footer-text">win win win win ❤️️ &COPY;andreaMgamez</div>
+        </nav>
+    </footer>
+
 </body>
 
 </html>

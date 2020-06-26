@@ -1,0 +1,54 @@
+body {
+  /* background image*/
+  width: 100%;
+  height: 900px;
+  background-image: url("/assets/images/lights.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* font parameters*/
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-size: 1em;
+}
+
+.navbar {
+  /*background*/
+  background-color: transparent;
+  color: whitesmoke;
+  padding-bottom: 0;
+  padding-left: 0;
+  height: 100px;
+  width: 100%;
+  /* font*/
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 20px;
+  /* border styling*/
+  border-bottom: solid;
+  border-bottom-color: hotpink;
+  border-width: 4px;
+}
+
+.container-fluid {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.footer {
+  background-color: hotpink;
+  height: 8%;
+  border-top: solid;
+  border-top-color: whitesmoke;
+  border-top-width: 8px;
+}
+
+.footer-text {
+  width: 100%;
+  text-align: center;
+  font-family: Chalkduster, fantasy;
+  font-size: 20px;
+  color: black;
+}
+
+button {
+  margin: 1em;
+}
