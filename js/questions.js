@@ -31,7 +31,7 @@ var questions = [
     },
     {
         title: "Is JS case-sensitive?",
-        choices: ["Yes", "No", "Only when it gets gitIgnored", "Depends on the situation"],
+        choices: ["Yes", "No", "Only when it gets gitignored", "Depends on the situation"],
         answer: "Yes"
     },
     {

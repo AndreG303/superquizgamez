@@ -7,7 +7,6 @@ var submitButton = document.querySelector("button.submitButton");
 var uScoreEl = document.getElementById("uScore");
 
 var secondsLeft = (questions.length * 20 + 1);
-var questionNumber = 0;
 var userNameInput;
 var questionNumber = -1;
 var answer;
@@ -38,18 +37,20 @@ function setTimer() {
 
 function initializeQuestion() {
     questionNumber++;
-    answer= questions[questionNumber].answer;
+    if (questionNumber !== 12) {
+        answer = questions[questionNumber].answer;
+        questionTitle.textContent = questions[questionNumber].title;
+        answerChoices.innerHTML = "";
 
-    questionTitle.textContent = questions[questionNumber].title;
-    answerChoices.innerHTML = "";
+        var choices = questions[questionNumber].choices;
+        for (var q = 0; q < choices.length; q++) {
+            var nextChoice = document.createElement("button");
 
-    var choices = questions[questionNumber].choices;
-
-    for (var q = 0; q < choices.length; q++) {
-        var nextChoice = document.createElement("button");
-
-        nextChoice.textContent = choices[q];
-        answerButton = answerChoices.appendChild(nextChoice).setAttribute("class", "p-3 m-1 btn btn-light btn-block");
+            nextChoice.textContent = choices[q];
+            answerButton = answerChoices
+                .appendChild(nextChoice)
+                .setAttribute("class", "p-3 m-1 btn btn-light btn-block");
+        }
     }
 }
 
@@ -73,12 +74,12 @@ function addScore() {
         name: userNameInput,
         score: secondsLeft
     };
- 
+
 
     var highScores = JSON.parse(localStorage.getItem("highScores") || "[]");
-   
+
     highScores.push(newScore);
-   
+
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
 }
