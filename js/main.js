@@ -83,7 +83,7 @@ answerChoices.addEventListener("click", function (event) {
     initializeQuestion();
 });
 
-// Scored is displayed to user and the score is = time left on clock
+// Score is displayed to user and the score is = time left on clock
 function displayScore() {
     document.getElementById("start").classList.add('d-none');
     document.getElementById("subScore").classList.remove('d-none');
