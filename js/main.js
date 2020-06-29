@@ -13,6 +13,7 @@ var answer;
 var questions;
 var answerButton;
 
+// timer starts and the main content changes to questions
 function startTimer() {
 
     document.getElementById("main-content").classList.add('d-none');
@@ -35,6 +36,7 @@ function setTimer() {
     }, 1000);
 }
 
+// When the question is answered the user is presented with another question
 function initializeQuestion() {
     questionNumber++;
     if (questionNumber !== 12) {
@@ -54,36 +56,7 @@ function initializeQuestion() {
     }
 }
 
-function displayScore() {
-    document.getElementById("start").classList.add('d-none');
-    document.getElementById("subScore").classList.remove('d-none');
-    uScoreEl.textContent = "Final Score " + secondsLeft + ".";
-}
-
-startButton.addEventListener("click", startTimer);
-submitButton.addEventListener("click", function (event) {
-    event.stopPropagation();
-    addScore();
-
-    window.location.href = './highscores.html';
-});
-
-function addScore() {
-    userNameInput = document.getElementById("uName").value;
-    var newScore = {
-        name: userNameInput,
-        score: secondsLeft
-    };
-
-
-    var highScores = JSON.parse(localStorage.getItem("highScores") || "[]");
-
-    highScores.push(newScore);
-
-    localStorage.setItem("highScores", JSON.stringify(highScores));
-
-}
-
+// Right or Wrong feedback to user - when user answers incorrectly time is substracted from the clock
 function hideFeedback() {
     var pEl = document.getElementsByClassName("feedback")[0];
     pEl.style.display = 'none';
@@ -109,3 +82,36 @@ answerChoices.addEventListener("click", function (event) {
     }
     initializeQuestion();
 });
+
+// Scored is displayed to user and the score is = time left on clock
+function displayScore() {
+    document.getElementById("start").classList.add('d-none');
+    document.getElementById("subScore").classList.remove('d-none');
+    uScoreEl.textContent = "Final Score " + secondsLeft + ".";
+}
+
+// Event listeners for start and submit buttons
+startButton.addEventListener("click", startTimer);
+submitButton.addEventListener("click", function (event) {
+    event.stopPropagation();
+    addScore();
+
+    window.location.href = './highscores.html';
+});
+
+// User name and score input
+function addScore() {
+    userNameInput = document.getElementById("uName").value;
+    var newScore = {
+        name: userNameInput,
+        score: secondsLeft
+    };
+
+//Local storage data recovery and push
+    var highScores = JSON.parse(localStorage.getItem("highScores") || "[]");
+
+    highScores.push(newScore);
+
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+
+}
