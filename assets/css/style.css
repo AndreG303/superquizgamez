@@ -1,41 +1,84 @@
 body {
-  /* background image*/
+  padding: 0;
+  margin: 0;
   width: 100%;
   height: 900px;
-  background-image: url("/assets/images/lights.jpg");
+  /* background image*/
+  background-image: url("../images/lights.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* font parameters*/
+
+  /*font parameters*/
   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-  font-size: 1em;
 }
 
 .navbar {
   /*background*/
   background-color: transparent;
   color: whitesmoke;
-  padding-bottom: 0;
   padding-left: 0;
-  height: 100px;
+  height: 70px;
   width: 100%;
-  /* font*/
+  /* font parameters*/
   font-variant: small-caps;
   font-weight: bold;
   font-size: 20px;
   /* border styling*/
   border-bottom: solid;
   border-bottom-color: hotpink;
-  border-width: 4px;
+  border-width: 3px;
 }
 
-.container-fluid {
-  padding-left: 5%;
-  padding-right: 5%;
+#main-content {
+  /* separation from navbar */
+  padding-top: 5mm;
+  /*font parameters*/
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+#start {
+  /*font parameters*/
+  color: whitesmoke;
+}
+
+.feedback {
+  /*font parameters*/
+  color: white;
+  font-weight: bold;
+}
+
+#subScore {
+  /*font parameters*/
+  color: whitesmoke;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+#hsTitle {
+  /*font parameters*/
+  color: whitesmoke;
+  font-variant: small-caps;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+#hsList {
+  /*font parameters*/
+  color: whitesmoke;
+  font-size: 25px;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+.horizontal-rule {
+  /* line separation */
+  border-top: 6px solid blue;
 }
 
 .footer {
   background-color: hotpink;
   height: 8%;
+  /* border styling */
   border-top: solid;
   border-top-color: whitesmoke;
   border-top-width: 8px;
@@ -44,8 +87,8 @@ body {
 .footer-text {
   width: 100%;
   text-align: center;
+  /*font parameters*/
   font-family: Chalkduster, fantasy;
-  font-size: 20px;
   color: black;
 }
 

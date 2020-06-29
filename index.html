@@ -5,46 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <!-- <script src="js/main.js" defer></script>
-    <script src="js/questions.js" defer></script> -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>SUPER QUIZ GAMEz</title>
 </head>
 
 <body>
-    <!-- fixed top nav bar -->
+    <!-- nav bar fixed top displaying View High Scores and Time -->
     <header class="p-3">
-        <nav class="navbar navbar-expand-md fixed-top">
+        <nav class="navbar navbar-expand-sm fixed-top">
             <div class="container-fluid">
-                <div id="highscore" class="nav-item nav-link"> View High Scores</div>
-                <h1 id="navbar-title">Super Quiz Gamez</h1>
-                <table id="timers" style="visibility: hidden;">
-                    <tr>
-                        <td> Time left in Game: </td>
-                        <td> <span id="gameTimer" class="nav-item"></span> </td>
-                    </tr>
-                    <tr>
-                        <td>Time left for Question:</td>
-                        <td> <span id="quesTimer" class="nav-item"></span> </td>
-                    </tr>
-                </table>
+                <a href="highscores.html">View High Scores</a>
+                <span id="time" class="float-right mr-2">Time: 0</span>
             </div>
         </nav>
     </header>
-    <!-- instructions and quiz content -->
-    <section class="container-fluid" id="details"></section>
 
+    <!-- Game Instructions and Start Button -->
+    <section class="container mt-5" id="main-content">
+        <div class="row justify-content-center mt-5 pt-3 pb-3">
+            <div class="col-10 col-lg-8 text-center">
+                <h1>Super Quiz Gamez</h1>
+                <p> Answer Fun JavaScript and Trivia Questions in Record Time, there is not better way to learn a
+                    lenguage! You have 20secs to answer each question...Be careful, if you answer incorrectly 10secs
+                    from yout total time will be subtracted.
+                </p>
+                <button type="button" id="startButton" class="btn btn-info btn-lg">START</button>
+            </div>
+        </div>
+    </section>
+    <!-- Questions, Answers and Feedbaack -->
+    <section class="container mt-5 d-none" id="start">
+        <div class="row justify-content-center mt-5 pt-3 pb-3">
+            <div class="col-10 col-lg-8" id="QA-block">
+                <h3 id="questions" class="mb-4">Title</h3>
+                <ul id="answers" class="list-unstyled"></ul>
+                <p class="feedback"></p>
+            </div>
+        </div>
+    </section>
+    <!-- Submit Score Form  -->
+    <section class="container mt-5 d-none" id="subScore">
+        <div class="row justify-content-center mt-5 pt-3 pb-3">
+            <div class="col-10 col-lg-8">
+                <h2>The End!</h2>
+                <p id="uScore"> </p>
+                <form class="form-group">
+                    <label for="uName">Enter Your Initials:</label>
+                    <input type="text" id="uName">
+                    <button type="button" class="btn btn-info btn-sm submitButton">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
     <!-- fixed bottom footer -->
     <footer>
         <nav class="navbar fixed-bottom footer">
@@ -52,6 +66,17 @@
         </nav>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

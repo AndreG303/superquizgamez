@@ -21,5 +21,4 @@ WHEN the game is over
 THEN I can save my initials and score
 
 // if you use leaderboard, array of objects
-// 1. Bobby 1000
-// 2. Jackie 999
+// 
